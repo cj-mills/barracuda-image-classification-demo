@@ -4,8 +4,7 @@ A simple Unity project demonstrating how to perform image classification with th
 
 
 ## Demo Video
-
-https://user-images.githubusercontent.com/9126128/231021257-05aaed14-5302-4df1-b266-120575ac29ad.mp4
+https://user-images.githubusercontent.com/9126128/231305884-865e656c-06df-42c6-a9db-c3bb1ded4c1a.mp4
 
 
 
