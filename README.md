@@ -3,6 +3,18 @@ A simple Unity project demonstrating how to perform image classification with th
 
 
 
+## Demo Video
+
+https://user-images.githubusercontent.com/9126128/231021257-05aaed14-5302-4df1-b266-120575ac29ad.mp4
+
+
+
+## Live Demo
+
+* https://cj-mills.github.io/barracuda-image-classification-demo/
+
+
+
 ## Getting Started
 
 1. Clone this repository to your local machine:
