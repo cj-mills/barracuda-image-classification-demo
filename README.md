@@ -11,7 +11,7 @@ git clone https://github.com/cj-mills/barracuda-image-classification-demo.git
 ```
 2. Open the project in Unity.
 
-3. Explore the sample scene and `InferenceController.cs`  script.
+3. Explore the sample scene and [`InferenceController.cs`](https://github.com/cj-mills/barracuda-image-classification-demo/blob/1a56aa1b93ae7cb8a4475199e39c93a0ce842f67/Assets/Scripts/InferenceController.cs)  script.
 
 
 
