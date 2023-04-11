@@ -1,7 +1,8 @@
-using CJM.BarracudaInference.ImageClassification;
 using System;
 using System.Linq;
 using UnityEngine;
+using CJM.BarracudaInference.ImageClassification;
+using CJM.DeepLearningImageProcessor;
 
 /// <summary>
 /// The InferenceController class manages the process of running the inference on the input image
@@ -18,6 +19,12 @@ public class InferenceController : MonoBehaviour
     [SerializeField] private MeshRenderer screenRenderer;
     [SerializeField] private bool printDebugMessages = false;
 
+    [Header("Data Processing")]
+    [Tooltip("The target dimensions for the processed image")]
+    [SerializeField] private int targetDim = 288;
+    [Tooltip("Flag to use compute shaders for processing input images.")]
+    [SerializeField] private bool useComputeShaders = false;
+
     // Output processing settings
     [Header("Output Processing")]
     [SerializeField, Tooltip("Flag to enable/disable async GPU readback for model output")]
@@ -29,17 +36,16 @@ public class InferenceController : MonoBehaviour
 
         var imageTexture = screenRenderer.material.mainTexture;
         var screenDims = new Vector2Int(imageTexture.width, imageTexture.height);
-        var inputDims = imageProcessor.CalculateInputDims(screenDims);
+        var inputDims = imageProcessor.CalculateInputDims(screenDims, targetDim);
 
-        var inputTexture = RenderTexture.GetTemporary(inputDims.x, inputDims.y, 24, RenderTextureFormat.ARGBHalf);
+        // Prepare and process the input texture
+        RenderTexture inputTexture = PrepareInputTexture(inputDims);
         Graphics.Blit(imageTexture, inputTexture);
         ProcessInputImage(inputTexture);
 
         // Get the model output and process the detected objects
         float[] outputArray = GetModelOutput(inputTexture, useAsyncGPUReadback);
-        //var outputArray = modelRunner.ExecuteModel(inputTexture);
         UpdateUI(outputArray);
-        RenderTexture.ReleaseTemporary(inputTexture);
     }
 
     /// <summary>
@@ -57,12 +63,22 @@ public class InferenceController : MonoBehaviour
     }
 
     /// <summary>
+    /// Prepare a temporary RenderTexture with the given input dimensions.
+    /// </summary>
+    /// <param name="inputDims">The input dimensions for the RenderTexture</param>
+    /// <returns>A temporary RenderTexture with the specified input dimensions</returns>
+    private RenderTexture PrepareInputTexture(Vector2Int inputDims)
+    {
+        return RenderTexture.GetTemporary(inputDims.x, inputDims.y, 0, RenderTextureFormat.ARGBHalf);
+    }
+
+    /// <summary>
     /// Processes the input image using the image processor.
     /// </summary>
     /// <param name="inputTexture">The input texture to be processed.</param>
     private void ProcessInputImage(RenderTexture inputTexture)
     {
-        if (SystemInfo.supportsComputeShaders)
+        if (SystemInfo.supportsComputeShaders && useComputeShaders)
         {
             imageProcessor.ProcessImageComputeShader(inputTexture, "NormalizeImage");
         }
