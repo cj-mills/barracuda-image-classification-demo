@@ -837,7 +837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1290204711}
   - component: {fileID: 1290204710}
-  - component: {fileID: 1290204709}
+  - component: {fileID: 1290204713}
   - component: {fileID: 1290204712}
   - component: {fileID: 1290204707}
   m_Layer: 0
@@ -864,22 +864,6 @@ MonoBehaviour:
   confidenceThresholdSlider: {fileID: 763952695}
   fpsRefreshRate: 0.1
   displayFPS: 1
---- !u!114 &1290204709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290204706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0808f488e9726f146bd4342e8a3098c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  processingShader: {fileID: 7200000, guid: 745d67b6609760d428fc14223a9e1e72, type: 3}
-  processingMaterial: {fileID: 2100000, guid: 97218c13c96b8ab4eb6c8455a701b016, type: 2}
-  normStatsJson: {fileID: 4900000, guid: 3c91d872bde7bcc46844378023ee45a7, type: 3}
-  targetDim: 288
 --- !u!114 &1290204710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,11 +876,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 964272c5e4475454e9d66ed12cb68f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageProcessor: {fileID: 1290204709}
+  imageProcessor: {fileID: 1290204713}
   modelRunner: {fileID: 1290204712}
   inferenceUI: {fileID: 1290204707}
   screenRenderer: {fileID: 1691310735}
   printDebugMessages: 0
+  targetDim: 288
+  useComputeShaders: 0
   useAsyncGPUReadback: 1
 --- !u!4 &1290204711
 Transform:
@@ -930,6 +916,22 @@ MonoBehaviour:
   workerType: 32768
   classLabels: {fileID: 4900000, guid: 566077fb26554df44b493dc77d3e0af2, type: 3}
   pixelShaderUnloadInterval: 100
+--- !u!114 &1290204713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290204706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d41b81a7ca4960a209887c984e375b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  processingComputeShader: {fileID: 7200000, guid: 2c418cec15ae44419d94328d0e8dcea8, type: 3}
+  normalizeShader: {fileID: 4800000, guid: 45d8405a4cc64ecfa477b712e0465c05, type: 3}
+  cropShader: {fileID: 4800000, guid: 0685d34a035b4cefa942d94390282c12, type: 3}
+  normStatsJson: {fileID: 4900000, guid: 9c8f1a57cb884c9b8a4439cae327a2f8, type: 3}
 --- !u!224 &1342013693 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 365967725391423246, guid: 08eb2b01a2de9654a8e6b73da219a9a9, type: 3}
