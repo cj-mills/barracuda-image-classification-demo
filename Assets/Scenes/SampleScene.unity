@@ -883,7 +883,7 @@ MonoBehaviour:
   printDebugMessages: 0
   targetDim: 288
   useComputeShaders: 0
-  useAsyncGPUReadback: 1
+  useAsyncGPUReadback: 0
 --- !u!4 &1290204711
 Transform:
   m_ObjectHideFlags: 0
