@@ -40,7 +40,7 @@
       "hash": "feea6fc93aba9dd13880cbfbc68a802137dedf04"
     },
     "com.unity.2d.animation": {
-      "version": "9.0.1",
+      "version": "9.0.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -90,7 +90,7 @@
       "dependencies": {}
     },
     "com.unity.2d.spriteshape": {
-      "version": "9.0.1",
+      "version": "9.0.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -110,7 +110,7 @@
       }
     },
     "com.unity.2d.tilemap.extras": {
-      "version": "3.0.3",
+      "version": "3.1.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -133,7 +133,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.3",
+      "version": "1.8.4",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -142,7 +142,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.0.0",
+      "version": "2.0.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -170,17 +170,17 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.2d.animation": "9.0.1",
+        "com.unity.2d.animation": "9.0.2",
         "com.unity.2d.pixel-perfect": "5.0.3",
         "com.unity.2d.psdimporter": "8.0.2",
         "com.unity.2d.sprite": "1.0.0",
-        "com.unity.2d.spriteshape": "9.0.1",
+        "com.unity.2d.spriteshape": "9.0.2",
         "com.unity.2d.tilemap": "1.0.0",
-        "com.unity.2d.tilemap.extras": "3.0.3"
+        "com.unity.2d.tilemap.extras": "3.1.0"
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.18",
+      "version": "3.0.20",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -189,7 +189,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.17",
+      "version": "2.0.18",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -225,7 +225,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.7.3",
+      "version": "1.7.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {
