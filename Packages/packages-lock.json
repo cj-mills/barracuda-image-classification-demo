@@ -7,7 +7,7 @@
       "dependencies": {
         "com.unity.barracuda": "3.0.0"
       },
-      "hash": "e9c00d328ab5d45fe4713dda6116702c0c33cc9c"
+      "hash": "66ed607eaf605dbb0f0fbb9cf0671f7caf858306"
     },
     "com.cj-mills.barracuda-inference-image-classification": {
       "version": "https://github.com/cj-mills/unity-barracuda-inference-image-classification.git",
@@ -16,28 +16,28 @@
       "dependencies": {
         "com.unity.barracuda": "3.0.0"
       },
-      "hash": "ca308bc16b465a8275fe06906c3912a29ca3c995"
+      "hash": "6104c006e89b4fc23c7cbc20ca4c6ee4e145bd43"
     },
     "com.cj-mills.cv-image-gallery": {
       "version": "https://github.com/cj-mills/unity-cv-image-gallery.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "38b595ab71c88ff8006ffe77000359ca8714e36c"
+      "hash": "e16703b17a9b571339dfc4e04b72882ea9395467"
     },
     "com.cj-mills.deep-learning-image-preprocessor": {
       "version": "https://github.com/cj-mills/unity-deep-learning-image-preprocessor.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "7b08610095d4e8211b300286f03f8a6664579063"
+      "hash": "831415d78c352866b5ca77f7b9b0a864002e68e4"
     },
     "com.cj-mills.unity-media-display": {
       "version": "https://github.com/cj-mills/Unity-Media-Display.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "feea6fc93aba9dd13880cbfbc68a802137dedf04"
+      "hash": "c248fce96bd241e71016eafe98c857b1d83a6e27"
     },
     "com.unity.2d.animation": {
       "version": "9.0.2",
